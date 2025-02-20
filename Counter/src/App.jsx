@@ -4,6 +4,14 @@ function App() {
   const [count, setCount] = React.useState(0);
 
   // by clicking + we add up a number
+  // We can write its like this
+  // function add() {
+  //   setCount(function (oldCount) {
+  //     return oldCount + 1;
+  //   })
+  // }
+
+  // ((prevCount) => preCount + 1) is same as the above but we use a callback function in the setCount
   function add() {
     setCount((prevCount) => prevCount + 1);
   }

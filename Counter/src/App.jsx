@@ -5,16 +5,16 @@ function App() {
 
   // by clicking + we add up a number
   function add() {
-    setCount(count + 1);
+    setCount((prevCount) => prevCount + 1);
   }
   // by clicking - we subtract a number
   function sub() {
-    setCount(count - 1);
+    setCount((prevCount) => prevCount - 1);
   }
 
   return (
     <main className="container">
-      <h1>How many times will Bob say "state" in this section?</h1>
+      <h1>How many times you can CLICK, are you on the + side or - side?</h1>
       <div className="counter">
         <button onClick={sub} className="minus" aria-label="Decrease count">
           -
